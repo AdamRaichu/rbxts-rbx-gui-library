@@ -13,7 +13,7 @@ Properties:
 		> The container frame for the radial menu. Can be used for positioning and resizing.
 		> Note that this frame should always be square, by default it's set to YY size constraining
 	Rotation [float]
- 		> The rotation offset that the developer entered as an argument when creating the radial menu.
+		> The rotation offset that the developer entered as an argument when creating the radial menu.
 	SubN [integer]
 		> The number of subsections that the developer entered as an argument when creating the radial menu.
 	Enabled [boolean]

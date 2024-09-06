@@ -1,2 +1,7 @@
 
 *.lock
+
+/node_modules
+/out
+/include
+*.tsbuildinfo
