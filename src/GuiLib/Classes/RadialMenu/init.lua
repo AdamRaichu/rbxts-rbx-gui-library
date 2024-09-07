@@ -45,7 +45,7 @@ Methods:
 	:IsVisible() [boolean]
 		> Returns whether or not the radial menu is visible to the user or not.
 	:Destroy() [void]
-		> Destroys the RadioButtonGroup and all the events, etc that were running it.
+		> Destroys the RadialMenu and all the events, etc that were running it.
 
 Events:
 	.Clicked:Connect(function(index [integer])
