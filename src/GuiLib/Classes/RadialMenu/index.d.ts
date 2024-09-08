@@ -5,7 +5,7 @@ interface RadialMenu {
    * and the ring is rotationally offset by `rotation` radians
    *
    * @param subN [integer] The number of sections
-   * @param tPercent [float] The width of the frame radius
+   * @param tPercent [float] The width of the frame radius (between 0 and 1, inclusive)
    * @param rotation [float] The rotation of the menu in radians.
    */
   new (subN: number, tPercent: number, rotation: number): RadialMenu;

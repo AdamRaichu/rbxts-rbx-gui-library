@@ -1,11 +1,12 @@
 {
   "name": "@rbxts/rbx-gui-library",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "description": "TypeScript definitions for Rbx Gui, a library EgoMoose created to help developers with a few common UI components that are not currently present on the Roblox platform.",
+  "main": "out/init.lua",
   "scripts": {
     "build": "rbxtsc",
     "watch": "rbxtsc -w",
-    "prepublishOnly": "npm run build"
+    "prepack": "npm run build"
   },
   "keywords": [],
   "author": "EgoMoose",
@@ -14,7 +15,7 @@
     "out",
     "!**/*.tsbuildinfo"
   ],
-  "types": "out/blank.d.ts",
+  "types": "out/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
