@@ -43,4 +43,49 @@ interface Slider {
    * If true then when the user clicks on the slider the dragger will tween to that target. If not it will be instant.
    */
   TweenClick: boolean;
+  /**
+   * If true then the value of the slider will be inverted (e.g. when horizontal the right-most position will be zero and left-most 1). This is useful for when you have a vertical slider as typically users envision the down-most position to be zero.
+   */
+  Inverted: boolean;
+
+  /**
+   * Returns the slider position from 0 to 1
+   */
+  Get(this: Slider): number;
+  /**
+   * Sets the slider to a specific position or closest possible if interval > 0. If `doTween` is true then the slider will tween to that position.
+   */
+  Set(this: Slider, value: number, doTween: boolean): void;
+  /**
+   * Destroys the slider frame and all the events, etc that were running it
+   */
+  Destroy(this: Slider): void;
+
+  /**
+   * When the slider's position changes, this fires the slider's current position
+   *
+   * ```ts
+   * .Connect((value: number) => {})
+   * ```
+   */
+  Changed: RBXScriptSignal;
+  /**
+   * When the user clicks somewhere on the slider, this fires the clicked position
+   *
+   * ```ts
+   * .Connect((value: number) => {})
+   * ```
+   */
+  Clicked: RBXScriptSignal;
+  /**
+   * Fires when the user starts dragging the slider
+   */
+  DragStart: RBXScriptSignal;
+  /**
+   * Fires when the user stops dragging the slider
+   */
+  DragStop: RBXScriptSignal;
 }
+
+declare const Slider: Slider;
+export = Slider;
